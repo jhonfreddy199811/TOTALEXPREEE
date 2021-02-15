@@ -1,0 +1,38 @@
+<div class="container p">
+    <div class="row">
+        <div class="col-md- ">
+            <h1></h1>
+            <a class="btn btn-success btn-block" href="http://localhost:8000/empleado/agregar">agregar</a>
+
+            <div class="">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>nombre</th>
+                                <th>apellido</th>
+                                <th>edad</th>
+                                <th>correo</th>
+                                <th>telefono</th>
+                                <th>opciones</th>
+                            </tr>
+                </div>
+                </thead>
+                <tbody>
+                    {{#each empleado}}
+                    <tr>
+                        <div class="col-6">
+                            <td>{{nombre}}</td>
+                            <td>{{apellido}}</td>
+                            <td>{{edad}}</td>
+                            <td>{{correo}}</td>
+                            <td>{{telefono}}</td>
+                            <td><a href="delete/{{id}}" class="btn btn-info">eliminar</a>
+                                <a href="modificar/{{id}}" class="btn btn-danger">modificar</a></td>
+                        </div>
+                        {{/each}}
+                    </tr>
+                </tbody>
+            </div>
+            </table>
+        </div>
